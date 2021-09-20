@@ -4,9 +4,10 @@ namespace ClientManager
 {
     public static class DaoFactory
     {
-        public static TEntity Create<TEntity>() where TEntity : class
+        public static TEntity Create<TEntity>(string connectionString) where TEntity : class
         {
-            throw new NotImplementedException();
+            // TODO: Create the appropriate DAO object and return it...
+            return null;
         }
     }
 }
