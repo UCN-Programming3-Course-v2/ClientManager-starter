@@ -11,7 +11,7 @@ namespace ClientManager.DataAccessLayer
     {
         public IEnumerable<Customer> GetAll()
         {
-            // TODO: Implement call to database for returning all rows from the Customers table
+            // TODO: Implement call to database for returning all rows from the Customers table (Exercise 1)
 
             // 1. Create and open a connection to the database
 
@@ -33,7 +33,7 @@ namespace ClientManager.DataAccessLayer
 
         public Customer GetById(int id)
         {
-            // TODO: Implement call to database for returning a specific row from the Customers table with the given id
+            // TODO: Implement call to database for returning a specific row from the Customers table with the given id (Exercise 1)
 
             throw new NotImplementedException();
         }
@@ -41,21 +41,21 @@ namespace ClientManager.DataAccessLayer
 
         public int Insert(Customer entity)
         {
-            // TODO: Implement call to database that inserts the entity into the customers table
+            // TODO: Implement call to database that inserts the entity into the customers table (Exercise 1)
 
             throw new NotImplementedException();
         }
 
         public bool Update(Customer entity)
         {
-            // TODO: Implement call to database that updates the entity in the customers table
+            // TODO: Implement call to database that updates the entity in the customers table (Exercise 1)
 
             throw new NotImplementedException();
         }
 
         public bool Delete(Customer entity)
         {
-            // TODO: Implement call to database that deletes the entity from the customers table
+            // TODO: Implement call to database that deletes the entity from the customers table (Exercise 1)
 
             throw new NotImplementedException();
         }
