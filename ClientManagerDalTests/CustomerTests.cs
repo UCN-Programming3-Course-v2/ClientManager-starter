@@ -1,7 +1,6 @@
 ﻿using ClientManager;
 using ClientManager.DataAccessLayer;
 using ClientManager.Model;
-using DatabaseVersioning;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
@@ -10,19 +9,7 @@ namespace ClientManagerDalTests
     [TestClass]
     public class CustomerTests
     {
-        private static string connectionString = $"Server=(local)\\SqlExpress; Database=ClientManager_{Guid.NewGuid()}; Trusted_connection=true";
-
-        [TestInitialize]
-        public void Setup()
-        {
-            DatabaseVersion.Upgrade(connectionString);
-        }
-
-        [TestCleanup]
-        public void TearDown()
-        {
-            DatabaseVersion.Destroy(connectionString);
-        }
+        private static string connectionString = $"Server=(local)\\SqlExpress; Database=ClientManager; Trusted_connection=true";
 
         [TestMethod]
         public void GetAllTest()

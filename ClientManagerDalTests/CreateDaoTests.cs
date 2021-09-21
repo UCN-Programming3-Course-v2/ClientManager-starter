@@ -8,7 +8,7 @@ namespace ClientManagerDalTests
     [TestClass]
     public class CreateDaoTests
     {
-        private static string connectionString = $"Server=(localdb)\\MSSqlLocalDb; Database=ClientManager_{Guid.NewGuid()}; Trusted_connection=true";
+        private static string connectionString = $"Server=(localdb)\\MSSqlLocalDb; Database=ClientManager; Trusted_connection=true";
 
         [TestMethod]
         public void CreateCustomerDao()
