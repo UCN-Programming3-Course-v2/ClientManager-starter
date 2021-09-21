@@ -9,17 +9,12 @@ namespace ClientManager.DataAccessLayer
 {
     internal abstract class Dao
     {
-        protected static string GetConnectionString()
+        public string ConnectionString { get; protected set; }
+
+        public Dao(string connectionString)
         {
-            SqlConnectionStringBuilder connStrBuilder = new SqlConnectionStringBuilder
-            {
-                DataSource = "", // TODO: insert your datasource
-                InitialCatalog = "", // TODO: insert the name of your database
-                IntegratedSecurity = true
-            };
-
-            return connStrBuilder.ConnectionString;
+            ConnectionString = connectionString;
         }
-
+      
     }
 }
