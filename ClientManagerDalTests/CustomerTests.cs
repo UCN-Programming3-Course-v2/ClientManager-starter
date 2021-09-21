@@ -1,6 +1,7 @@
 ﻿using ClientManager;
 using ClientManager.DataAccessLayer;
 using ClientManager.Model;
+using DatabaseVersioning;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
@@ -11,10 +12,23 @@ namespace ClientManagerDalTests
     {
         private static string connectionString = $"Server=(local)\\SqlExpress; Database=ClientManager_{Guid.NewGuid()}; Trusted_connection=true";
 
+        [TestInitialize]
+        public void Setup()
+        {
+            DatabaseVersion.Upgrade(connectionString);
+        }
+
+        [TestCleanup]
+        public void TearDown()
+        {
+            DatabaseVersion.Destroy(connectionString);
+        }
+
         [TestMethod]
         public void GetAllTest()
         {
             // TODO: Implement database integration test
+            ICustomerDao dao = DaoFactory.Create<ICustomerDao>(connectionString);
 
             Assert.Fail();
         }
