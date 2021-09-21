@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClientManager.DataAccessLayer
 {
+    // TODO: Solve the compile error
     class CustomerDao : Dao, ICustomerDao
     {
         public IEnumerable<Customer> GetAll()
